@@ -1,0 +1,250 @@
+{
+    "2025-10-28": {
+        "Far North": {
+            "Situation générale": "Maroua : calme ; Kousseri : RAS",
+            "Activités économiques": "Au ralenti",
+            "Circulation": "Normale",
+            "Couvre-feu": "Interdiction motos-taxis 20h–5h"
+        },
+        "North": {
+            "Situation générale": "Garoua tendu (présence FDS)",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale mais dissuasive",
+            "Couvre-feu": "Interdiction motos-taxis 20h–5h"
+        },
+        "Adamaoua": {
+            "Situation générale": "Ngaoundéré tendu",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "Centre": {
+            "Situation générale": "Yaoundé tendu (quartiers populaires)",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale mais présence FDS",
+            "Couvre-feu": "RAS"
+        },
+        "Littoral": {
+            "Situation générale": "Douala tendu ; risques de pillages",
+            "Activités économiques": "Marchés vides, banques fermées",
+            "Circulation": "Perturbée ; présence FDS",
+            "Couvre-feu": "Interdiction rassemblement + motos 18h–6h"
+        },
+        "West": {
+            "Situation générale": "Globalement RAS ; Dschang tendu",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "Interdiction motos-taxis jusqu'à 6h"
+        },
+        "North-West": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South-West": {
+            "Situation générale": "Buea en Ghost Town",
+            "Activités économiques": "Variable",
+            "Circulation": "Normale",
+            "Couvre-feu": "Ghost Town"
+        },
+        "East": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        }
+    },
+    "2025-10-29": {
+        "Far North": {
+            "Situation générale": "Kousseri : RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "Interdiction motos-taxis 20h–5h"
+        },
+        "North": {
+            "Situation générale": "Garoua calme",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "Interdiction motos-taxis 20h–5h"
+        },
+        "Adamaoua": {
+            "Situation générale": "Ngaoundéré tendu",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "Centre": {
+            "Situation générale": "Yaoundé tendu (quartiers populaires)",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale mais présence FDS",
+            "Couvre-feu": "RAS"
+        },
+        "Littoral": {
+            "Situation générale": "Douala très tendu ; pillages signalés",
+            "Activités économiques": "Marchés fermés, banques fermées",
+            "Circulation": "Très perturbée ; forte présence FDS",
+            "Couvre-feu": "Interdiction rassemblement + motos 18h–6h"
+        },
+        "West": {
+            "Situation générale": "Situation améliorée ; Dschang calme",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "North-West": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South-West": {
+            "Situation générale": "Buea en Ghost Town",
+            "Activités économiques": "Variable",
+            "Circulation": "Normale",
+            "Couvre-feu": "Ghost Town"
+        },
+        "East": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        }
+    },
+    "2025-10-30": {
+        "Far North": {
+            "Situation générale": "Maroua : calme ; Kousseri : RAS",
+            "Activités économiques": "Normale mais fermeture precoce des commerces",
+            "Circulation": "Normale",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "North": {
+            "Situation générale": "Garoua calme",
+            "Activités économiques": "Normale mais fermeture precoce des commerces",
+            "Circulation": "Normale",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "Adamaoua": {
+            "Situation générale": "Ngaoundéré situation stable",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "Centre": {
+            "Situation générale": "Yaoundé retour au calme",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "Littoral": {
+            "Situation générale": "Douala situation améliorée",
+            "Activités économiques": "Reprise progressive des activités",
+            "Circulation": "Normale avec présence FDS",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "West": {
+            "Situation générale": "RAS dans toute la région",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "North-West": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South-West": {
+            "Situation générale": "Buea situation normalisée",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "East": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        }
+    },
+    "2025-10-31": {
+        "Far North": {
+            "Situation générale": "Maroua : calme ; Kousseri : RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "North": {
+            "Situation générale": "Garoua calme",
+            "Activités économiques": "Normale mais fermeture precoce des commerces",
+            "Circulation": "Normale",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "Adamaoua": {
+            "Situation générale": "Ngaoundéré situation stable",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "Centre": {
+            "Situation générale": "Yaoundé retour au calme",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "Littoral": {
+            "Situation générale": "Douala situation améliorée",
+            "Activités économiques": "Reprise progressive des activités",
+            "Circulation": "Normale avec présence FDS",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "West": {
+            "Situation générale": "RAS dans toute la région",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "North-West": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South-West": {
+            "Situation générale": "Buea situation normalisée",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "East": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        }
+    }
+}
