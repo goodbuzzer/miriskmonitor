@@ -217,10 +217,10 @@
             "Couvre-feu": "Interdiction motos 20h–5h"
         },
         "West": {
-            "Situation générale": "RAS dans toute la région",
-            "Activités économiques": "Normale",
-            "Circulation": "Normale",
-            "Couvre-feu": "RAS"
+            "Situation générale": "Bafoussam forte militarisation",
+            "Activités économiques": "Commerce ferme",
+            "Circulation": "Ghost Town",
+            "Couvre-feu": "Ghost Town"
         },
         "North-West": {
             "Situation générale": "RAS",
@@ -247,4 +247,5 @@
             "Couvre-feu": "RAS"
         }
     }
+
 }
