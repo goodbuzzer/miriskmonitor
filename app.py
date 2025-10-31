@@ -247,6 +247,21 @@ show_table = st.sidebar.checkbox("Afficher le tableau détaillé", value=True)
 # -------------------------------------------------------
 st.subheader("📊 Vue d'Ensemble Nationale")
 
+# Charger les Top Stories depuis le fichier JSON
+with open("top_stories.json", "r", encoding="utf-8") as f:
+    top_stories_data = json.load(f)
+
+# Récupérer les Top Stories pour la date sélectionnée
+top_stories = top_stories_data.get(selected_date, {})
+
+with st.expander(f"📰 Top Stories ({date_display})", expanded=True):
+    if top_stories:
+        st.markdown(f"**Top Stories pour le {date_display} :**")
+        st.write(top_stories)
+    else:
+        st.info(f"Aucune rubrique 'Top Stories' disponible pour le {date_display}.")
+
+
 df_stats = create_statistics_dataframe(security_data)
 
 # Filtrer selon les critères
