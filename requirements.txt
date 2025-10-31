@@ -6,5 +6,6 @@ pandas
 plotly
 shapely
 fiona
-
+matplotlib
 pyproj
+
