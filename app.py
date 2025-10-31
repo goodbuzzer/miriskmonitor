@@ -65,6 +65,18 @@ def load_security_data_by_date():
         return {}
 
 @st.cache_data
+def load_risk_data():
+    """Charge les données de risque depuis risque.json"""
+    file_path = "risque.json"
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data
+    except FileNotFoundError:
+        st.warning("⚠️ Fichier risque.json non trouvé. Calcul automatique utilisé.")
+        return {}
+
+@st.cache_data
 def load_geodata():
     geojson_file = "geoBoundaries-CMR-ADM1_simplified.geojson"
     try:
@@ -74,6 +86,7 @@ def load_geodata():
         return None
 
 all_security_data = load_security_data_by_date()
+risk_data = load_risk_data()
 gdf = load_geodata()
 
 # Obtenir la liste des dates disponibles
@@ -82,8 +95,22 @@ available_dates = sorted(all_security_data.keys(), reverse=True)
 # -------------------------------------------------------
 # FONCTIONS D'ANALYSE
 # -------------------------------------------------------
-def calculate_alert_level(region_data):
-    """Calcule le niveau d'alerte basé sur les indicateurs"""
+def calculate_alert_level(region_data, region_name="", date_str=""):
+    """Calcule le niveau d'alerte basé sur risque.json ou les indicateurs"""
+    
+    # Essayer d'abord de lire depuis risque.json
+    if date_str and region_name and date_str in risk_data and region_name in risk_data[date_str]:
+        level_fr = risk_data[date_str][region_name]
+        
+        # Convertir le niveau français en format standard
+        if level_fr == "Élevé":
+            return "Élevé", "🔴", "#d32f2f"
+        elif level_fr == "Moyen":
+            return "Moyen", "🟡", "#f57c00"
+        elif level_fr == "Faible":
+            return "Faible", "🟢", "#388e3c"
+    
+    # Si pas trouvé dans risque.json, utiliser l'ancien calcul
     score = 0
     situation = region_data.get('Situation générale', '').lower()
     activites = region_data.get('Activités économiques', '').lower()
@@ -117,11 +144,11 @@ def calculate_alert_level(region_data):
     else:
         return "Faible", "🟢", "#388e3c"
 
-def create_statistics_dataframe(data):
+def create_statistics_dataframe(data, date_str=""):
     """Crée un DataFrame pour l'analyse statistique"""
     rows = []
     for region, info in data.items():
-        level, icon, color = calculate_alert_level(info)
+        level, icon, color = calculate_alert_level(info, region, date_str)
         rows.append({
             'Région': region,
             'Niveau d\'alerte': level,
@@ -133,8 +160,6 @@ def create_statistics_dataframe(data):
         })
     return pd.DataFrame(rows)
 
-# -------------------------------------------------------
-# HEADER
 # -------------------------------------------------------
 st.markdown('<div class="main-header">🛡️ Veille Sécuritaire – Cameroun Post-Scrutin Présidentiel</div>', 
             unsafe_allow_html=True)
@@ -262,7 +287,7 @@ with st.expander(f"📰 Top Stories ({date_display})", expanded=True):
         st.info(f"Aucune rubrique 'Top Stories' disponible pour le {date_display}.")
 
 
-df_stats = create_statistics_dataframe(security_data)
+df_stats = create_statistics_dataframe(security_data, selected_date)
 
 # Filtrer selon les critères
 filtered_df = df_stats[df_stats['Région'].isin(selected_regions)]
@@ -355,7 +380,7 @@ if show_comparison and len(available_dates) > 1:
         # Ajouter la date actuelle
         for region in selected_regions:
             if region in security_data:
-                level, _, _ = calculate_alert_level(security_data[region])
+                level, _, _ = calculate_alert_level(security_data[region], region, selected_date)
                 comparison_data.append({
                     'Date': datetime.strptime(selected_date, "%Y-%m-%d").strftime("%d/%m/%Y"),
                     'Région': region,
@@ -367,7 +392,7 @@ if show_comparison and len(available_dates) > 1:
             comp_data = all_security_data.get(comp_date, {})
             for region in selected_regions:
                 if region in comp_data:
-                    level, _, _ = calculate_alert_level(comp_data[region])
+                    level, _, _ = calculate_alert_level(comp_data[region], region, comp_date)
                     comparison_data.append({
                         'Date': datetime.strptime(comp_date, "%Y-%m-%d").strftime("%d/%m/%Y"),
                         'Région': region,
@@ -416,20 +441,63 @@ if show_stats:
         st.plotly_chart(fig_pie, use_container_width=True)
     
     with col_chart2:
-        # Graphique en barres par région
-        fig_bar = px.bar(
-            filtered_df,
-            x="Région",
-            color="Niveau d'alerte",
-            title="Niveau d'Alerte par Région",
-            color_discrete_map={
-                "Élevé": "#d32f2f",
-                "Moyen": "#f57c00",
-                "Faible": "#388e3c"
-            }
-        )
-        fig_bar.update_layout(showlegend=True, xaxis_tickangle=-45)
-        st.plotly_chart(fig_bar, use_container_width=True)
+        # Graphe d'évolution du risque par région (d'après risque.json)
+        if not risk_data:
+            st.info("⚠️ Pas de données dans risque.json pour afficher l'évolution.")
+        else:
+            rows = []
+            # Trier les dates chronologiquement
+            sorted_dates = sorted(risk_data.keys())
+            score_map = {"Faible": 1, "Moyen": 2, "Élevé": 3}
+
+            # Afficher uniquement ces régions (si elles existent)
+            target_regions = ["Far North", "Littoral", "Centre", "North", "West"]
+            # Respecter la sélection utilisateur si possible, sinon tomber back sur les régions présentes dans risque.json
+            regions_to_plot = [r for r in target_regions if r in selected_regions]
+            if not regions_to_plot:
+                regions_to_plot = [r for r in target_regions if any(r in risk_data.get(d, {}) for d in sorted_dates)]
+
+            for date_str in sorted_dates:
+                for region in regions_to_plot:
+                    level = risk_data.get(date_str, {}).get(region)
+                    if level:
+                        try:
+                            date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+                        except Exception:
+                            date_obj = date_str
+                        rows.append({
+                            "Date": date_obj,
+                            "Région": region,
+                            "Niveau": level,
+                            "Score": score_map.get(level, None)
+                        })
+
+            if len(rows) == 0:
+                st.info("ℹ️ Aucune donnée d'évolution pour les régions sélectionnées.")
+            else:
+                evo_df = pd.DataFrame(rows)
+                evo_df = evo_df.sort_values("Date")
+
+                fig_evo = px.line(
+                    evo_df,
+                    x="Date",
+                    y="Score",
+                    color="Région",
+                    markers=True,
+                    title="Évolution du niveau de risque par région (sélection restreinte)",
+                    hover_data=["Niveau"]
+                )
+
+                # Afficher labels lisibles pour l'axe Y
+                fig_evo.update_yaxes(
+                    tickmode="array",
+                    tickvals=[1, 2, 3],
+                    ticktext=["Faible", "Moyen", "Élevé"],
+                    range=[0.8, 3.2]
+                )
+
+                fig_evo.update_layout(hovermode="x unified", legend_title_text="Région")
+                st.plotly_chart(fig_evo, use_container_width=True)
     
     # Analyse des couvre-feux
     st.subheader("🌙 Analyse des Couvre-feux")
@@ -461,7 +529,7 @@ if show_map and gdf is not None:
     # Fonction pour créer le tooltip enrichi
     def build_enhanced_tooltip(region):
         d = security_data.get(region, {})
-        level, icon, color = calculate_alert_level(d)
+        level, icon, color = calculate_alert_level(d, region, selected_date)
         
         return (
             f"<div style='font-family: Arial; min-width: 250px;'>"
@@ -479,7 +547,7 @@ if show_map and gdf is not None:
     # Fonction pour déterminer la couleur de la région
     def get_region_color(region):
         d = security_data.get(region, {})
-        level, _, color = calculate_alert_level(d)
+        level, _, color = calculate_alert_level(d, region, selected_date)
         return color
     
     gdf["tooltip"] = gdf["shapeName"].apply(build_enhanced_tooltip)

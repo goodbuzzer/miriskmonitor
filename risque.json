@@ -1,0 +1,50 @@
+{
+    "2025-10-28": {
+        "Far North":"Élevé",
+        "North":"Élevé",
+        "Adamaoua":"Faible",
+        "Centre": "Élevé",
+        "Littoral":"Élevé",
+        "West":"Moyen",
+        "North-West":"Faible",
+        "South-West":"Faible",
+        "East":"Faible",
+        "South": "Faible"
+    },
+        "2025-10-29": {
+        "Far North":"Moyen",
+        "North":"Moyen",
+        "Adamaoua":"Faible",
+        "Centre": "Moyen",
+        "Littoral":"Moyen",
+        "West":"Moyen",
+        "North-West":"Faible",
+        "South-West":"Moyen",
+        "East":"Faible",
+        "South": "Faible"
+    },
+        "2025-10-30": {
+        "Far North":"Faible",
+        "North":"Moyen",
+        "Adamaoua":"Faible",
+        "Centre": "Moyen",
+        "Littoral":"Moyen",
+        "West":"Faible",
+        "North-West":"Faible",
+        "South-West":"Faible",
+        "East":"Faible",
+        "South": "Faible"
+    },
+        "2025-10-31": {
+        "Far North":"Moyen",
+        "North":"Moyen",
+        "Adamaoua":"Faible",
+        "Centre": "Moyen",
+        "Littoral":"Élevé",
+        "West":"Moyen",
+        "North-West":"Faible",
+        "South-West":"Faible",
+        "East":"Faible",
+        "South": "Faible"
+    }
+}
