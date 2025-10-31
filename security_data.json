@@ -213,11 +213,11 @@
         "Littoral": {
             "Situation générale": "Douala situation améliorée",
             "Activités économiques": "Reprise progressive des activités",
-            "Circulation": "Normale avec présence FDS",
-            "Couvre-feu": "Interdiction motos 20h–5h"
+            "Circulation": "Normale avec présence FDS Pas d'ecoles",
+            "Couvre-feu": "Interdiction motos taxis 20h–5h"
         },
         "West": {
-            "Situation générale": "Bafoussam forte militarisation",
+            "Situation générale": "Tendu à Bafoussam forte militarisation",
             "Activités économiques": "Commerce ferme",
             "Circulation": "Ghost Town",
             "Couvre-feu": "Ghost Town"
@@ -249,3 +249,4 @@
     }
 
 }
+
