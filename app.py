@@ -411,7 +411,7 @@ if show_comparison and len(available_dates) > 1:
             title="Comparaison des Niveaux d'Alerte entre Dates",
             category_orders={"Niveau": ["Faible", "Moyen", "Élevé"]}
         )
-        st.plotly_chart(fig_comparison, use_container_width=True)
+        st.plotly_chart(fig_comparison, width='stretch')
     
     st.markdown("---")
 
@@ -438,7 +438,7 @@ if show_stats:
             }
         )
         fig_pie.update_traces(textposition='inside', textinfo='percent+label')
-        st.plotly_chart(fig_pie, use_container_width=True)
+        st.plotly_chart(fig_pie, width='stretch')
     
     with col_chart2:
         # Graphe d'évolution du risque par région (d'après risque.json)
@@ -497,7 +497,7 @@ if show_stats:
                 )
 
                 fig_evo.update_layout(hovermode="x unified", legend_title_text="Région")
-                st.plotly_chart(fig_evo, use_container_width=True)
+                st.plotly_chart(fig_evo, width='stretch')
     
     # Analyse des couvre-feux
     st.subheader("🌙 Analyse des Couvre-feux")
@@ -630,7 +630,7 @@ if show_table:
             return ['background-color: #e8f5e9'] * len(row)
     
     styled_df = display_df.style.apply(highlight_alert, axis=1)
-    st.dataframe(styled_df, use_container_width=True, height=400)
+    st.dataframe(styled_df, width='stretch', height=400)
     
     # Bouton d'export
     csv = display_df.to_csv(index=False, encoding='utf-8-sig')
