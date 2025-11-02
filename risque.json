@@ -46,5 +46,18 @@
         "South-West":"Faible",
         "East":"Faible",
         "South": "Faible"
+    },
+        "2025-11-01": {
+        "Far North":"Moyen",
+        "North":"Moyen",
+        "Adamaoua":"Faible",
+        "Centre": "Moyen",
+        "Littoral":"Moyen",
+        "West":"Moyen",
+        "North-West":"Faible",
+        "South-West":"Faible",
+        "East":"Faible",
+        "South": "Faible"
     }
+
 }
