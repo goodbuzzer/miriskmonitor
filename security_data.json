@@ -308,9 +308,134 @@
             "Circulation": "Normale",
             "Couvre-feu": "RAS"
         }
+    },
+        "2025-11-02": {
+        "Far North": {
+            "Situation générale": "Maroua et autres : calme ",
+            "Activités économiques": "Normale mais inflation prix du carburant frelaté",
+            "Circulation": "Transport interurbain Hors Service",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "North": {
+            "Situation générale": "Garoua calme",
+            "Activités économiques": "Normale mais commerces à horaires réduites",
+            "Circulation": "Transport interurbain Hors Service",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "Adamaoua": {
+            "Situation générale": "Ngaoundéré situation stable",
+            "Activités économiques": "Normale",
+            "Circulation": "Transport interurbain Hors Service",
+            "Couvre-feu": "RAS"
+        },
+        "Centre": {
+            "Situation générale": "Yaoundé retour au calme",
+            "Activités économiques": "Marchés bondés pour ravitaillement et inflation",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "Littoral": {
+            "Situation générale": "Douala calme",
+            "Activités économiques": "Marchés bondés pour ravitaillement et inflation. Pénurie de gaz",
+            "Circulation": "Normale avec présence FDS",
+            "Couvre-feu": "Interdiction motos taxis 20h–5h"
+        },
+        "West": {
+            "Situation générale": "forte militarisation",
+            "Activités économiques": "Marchés bondés",
+            "Circulation": "Normal",
+            "Couvre-feu": "RAS"
+        },
+        "North-West": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South-West": {
+            "Situation générale": "Buea situation normalisée",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "East": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        }
+    },
+        "2025-11-03": {
+        "Far North": {
+            "Situation générale": "Maroua et autres : calme ",
+            "Activités économiques": "Ville morte et inflation prix du carburant frelaté",
+            "Circulation": "Transport interurbain Hors Service",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "North": {
+            "Situation générale": "Garoua calme",
+            "Activités économiques": "Ville morte",
+            "Circulation": "Transport interurbain Hors Service",
+            "Couvre-feu": "Interdiction motos 20h–5h"
+        },
+        "Adamaoua": {
+            "Situation générale": "Ngaoundéré situation stable",
+            "Activités économiques": "Commerces à moitié fermées",
+            "Circulation": "Transport interurbain Hors Service",
+            "Couvre-feu": "RAS"
+        },
+        "Centre": {
+            "Situation générale": "Yaoundé retour au calme",
+            "Activités économiques": "Marchés sec par endroit",
+            "Circulation": "Normale. Pas de bouchons. Transports interurbains difficile",
+            "Couvre-feu": "RAS"
+        },
+        "Littoral": {
+            "Situation générale": "Douala calme",
+            "Activités économiques": "Marchés sec. Pénurie de gaz",
+            "Circulation": "Sèche avec présence FDS",
+            "Couvre-feu": "Interdiction motos taxis 20h–5h"
+        },
+        "West": {
+            "Situation générale": "forte militarisation",
+            "Activités économiques": "Marchés sec",
+            "Circulation": "Normal",
+            "Couvre-feu": "RAS"
+        },
+        "North-West": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South-West": {
+            "Situation générale": "Buea situation normalisée",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "East": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        },
+        "South": {
+            "Situation générale": "RAS",
+            "Activités économiques": "Normale",
+            "Circulation": "Normale",
+            "Couvre-feu": "RAS"
+        }
     }
     
 }
+
 
 
 
