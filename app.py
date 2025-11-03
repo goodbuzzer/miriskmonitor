@@ -483,6 +483,7 @@ if show_stats:
                     x="Date",
                     y="Score",
                     color="Région",
+                    line_shape="spline",
                     markers=True,
                     title="Évolution du niveau de risque par région (sélection restreinte)",
                     hover_data=["Niveau"]
@@ -676,3 +677,4 @@ st.markdown("""
     <p style='font-size: 0.9rem;'>Données actualisées en temps réel | Media Intelligence 2025</p>
 </div>
 """, unsafe_allow_html=True)
+
