@@ -94,8 +94,33 @@
         "South-West":"Faible",
         "East":"Faible",
         "South": "Faible"
+    },
+        "2025-11-05": {
+        "Far North":"Moyen",
+        "North":"Moyen",
+        "Adamaoua":"Moyen",
+        "Centre": "Moyen",
+        "Littoral":"Moyen",
+        "West":"Moyen",
+        "North-West":"Faible",
+        "South-West":"Faible",
+        "East":"Faible",
+        "South": "Faible"
+    },
+        "2025-11-06": {
+        "Far North":"Moyen",
+        "North":"Moyen",
+        "Adamaoua":"Moyen",
+        "Centre": "Moyen",
+        "Littoral":"Moyen",
+        "West":"Moyen",
+        "North-West":"Faible",
+        "South-West":"Faible",
+        "East":"Faible",
+        "South": "Faible"
     }
 
 }
+
 
 
