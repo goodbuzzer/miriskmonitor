@@ -99,7 +99,7 @@
         "Far North":"Moyen",
         "North":"Moyen",
         "Adamaoua":"Moyen",
-        "Centre": "Moyen",
+        "Centre": "Faible",
         "Littoral":"Moyen",
         "West":"Moyen",
         "North-West":"Faible",
@@ -111,7 +111,7 @@
         "Far North":"Moyen",
         "North":"Moyen",
         "Adamaoua":"Moyen",
-        "Centre": "Moyen",
+        "Centre": "Faible",
         "Littoral":"Moyen",
         "West":"Moyen",
         "North-West":"Faible",
@@ -121,6 +121,7 @@
     }
 
 }
+
 
 
 
